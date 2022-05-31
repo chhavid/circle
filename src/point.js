@@ -10,7 +10,7 @@ class Point {
     const yDelta = anotherPoint.y - this.y;
     const xDeltaSq = xDelta * xDelta;
     const yDeltaSq = yDelta * yDelta;
-    return Math.sqrt(xDeltaSq + yDeltaSq).toFixed(3);
+    return + Math.sqrt(xDeltaSq + yDeltaSq).toFixed(3);
   }
 
   equals(anotherPoint) {

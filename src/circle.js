@@ -7,16 +7,21 @@ class Circle {
   }
 
   area() {
-    return (Math.PI * this.radius * this.radius).toFixed(3);
+    return +(Math.PI * this.radius * this.radius).toFixed(3);
   }
 
   circumference() {
-    return (2 * Math.PI * this.radius).toFixed(3);
+    return +(2 * Math.PI * this.radius).toFixed(3);
   }
 
   encloses(point) {
     const point1 = new Point(point.x, point.y);
     return this.radius > point1.distanceBetween(this.point);
+  }
+
+  onCircumference(point) {
+    const point1 = new Point(point.x, point.y);
+    return this.radius === point1.distanceBetween(this.point);
   }
 
   equals(anotherCircle) {
