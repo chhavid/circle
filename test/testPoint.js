@@ -21,14 +21,14 @@ describe('Point', () => {
       const point1 = new Point(0, 0);
       const point2 = new Point(5, 5);
 
-      assert.equal(point1.distanceBetween(point2.point), 7.071);
+      assert.equal(point1.distanceBetween(point2), 7.071);
     });
 
     it('should give dstance between two negative points', () => {
       const point1 = new Point(-1, -5);
       const point2 = new Point(5, -2);
 
-      assert.equal(point1.distanceBetween(point2.point), 6.708);
+      assert.equal(point1.distanceBetween(point2), 6.708);
     });
   });
 });

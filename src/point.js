@@ -1,13 +1,13 @@
 class Point {
   constructor(x, y) {
-    this.point = { x, y };
-    // this.x = x;
-    // this.y = y;
+    this.x = x;
+    this.y = y;
   }
 
   distanceBetween(anotherPoint) {
-    const xDelta = anotherPoint.x - this.point.x;
-    const yDelta = anotherPoint.y - this.point.y;
+    // return new LineSegment(this.point, anotherPoint).length;
+    const xDelta = anotherPoint.x - this.x;
+    const yDelta = anotherPoint.y - this.y;
     const xDeltaSq = xDelta * xDelta;
     const yDeltaSq = yDelta * yDelta;
     return Math.sqrt(xDeltaSq + yDeltaSq).toFixed(3);
@@ -15,8 +15,8 @@ class Point {
 
   equals(anotherPoint) {
     return anotherPoint instanceof Point &&
-      anotherPoint.point.x === this.point.x &&
-      anotherPoint.point.y === this.point.y;
+      anotherPoint.x === this.x &&
+      anotherPoint.y === this.y;
   }
 }
 
