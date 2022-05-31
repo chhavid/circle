@@ -1,4 +1,4 @@
-const { Point } = require('./point');
+const { Point, round } = require('./point.js');
 
 class Circle {
   constructor(point, radius) {
@@ -7,11 +7,11 @@ class Circle {
   }
 
   area() {
-    return +(Math.PI * this.radius * this.radius).toFixed(3);
+    return round(Math.PI * this.radius * this.radius);
   }
 
   circumference() {
-    return +(2 * Math.PI * this.radius).toFixed(3);
+    return round(2 * Math.PI * this.radius);
   }
 
   encloses(point) {
@@ -33,3 +33,4 @@ class Circle {
 }
 
 exports.Circle = Circle;
+exports.round = round;
