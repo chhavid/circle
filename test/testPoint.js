@@ -17,14 +17,14 @@ describe('Point', () => {
   });
 
   describe('distanceBetween', () => {
-    it('should give dstance between two points', () => {
+    it('should give distance between two points', () => {
       const point1 = new Point(0, 0);
       const point2 = new Point(5, 5);
 
       assert.equal(point1.distanceBetween(point2), 7.071);
     });
 
-    it('should give dstance between two negative points', () => {
+    it('should give distance between two negative points', () => {
       const point1 = new Point(-1, -5);
       const point2 = new Point(5, -2);
 
